@@ -8,8 +8,7 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     color: var(--clr-gray1);
-    scroll-padding-top: 67px; /*header height */
-    padding-top: 67px;
+    scroll-padding-top: 67px;
     scroll-behavior: smooth;
     
     --clr-gray1: #333333;
@@ -33,6 +32,18 @@
     --font-size-xxl: 1.5rem;
 }
 
+.sr-only { /*hidden headings, for accessibility and semantics */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -50,12 +61,15 @@ body {
 }
 
 header {
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
-    padding: 1em;
     background-color: var(--clr-white);
+    margin-bottom: 3em;
+    width: clamp(248px, 95%, 1300px);
 }
+
+/* navigation */
 
 .nav-logo {
     font-family: 'Heebo', sans-serif;
@@ -67,7 +81,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff; /*otherwise is transparent */
+    padding: 1em;
+    background-color: var(--clr-white);
 } 
 
 .nav-menu {
@@ -81,14 +96,14 @@ header {
 }
 
 .nav-item {
-    padding: 0.2em 0.8em;
+    padding: 0.2em 1.2em;
 }
 
 .nav-menu.clicked {
     top: 0;  /*this line takes it back to screen */
     left: 0;
     right: 0; /*for full width */
-    bottom: 0;
+    /* bottom: 0; */
     flex-direction: column;
     justify-content: space-around;
     background-color: #fff; /*otherwise is transparent */
@@ -112,19 +127,41 @@ main {
     width: clamp(248px, 90%, 920px);
 }
 
-
-section {
-    min-height: 50vh;
+section + section {
+    margin-top: 8em;
 }
 
-h2 {
+.section__title {
     font-size: var(--font-size-xl);
+    color: var(--clr-gray1);
+    padding: 0.8em 0;
 }
 
-.container--card {
+#home .section__title {
+    font-size: var(--font-size-xxl);
+}
+
+.title__accent {
+    display: block;
+    font-size: var(--font-size-s);
+    color: var(--clr-blue);
+    padding: 0.5em 0;
+}
+
+p {
+    font-size: var(--font-size-s);
+    font-weight: 400;
+    color: var(--clr-gray2);
+}
+
+.grid-wrapper {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0.5em;
+}
+
+.container--card {
+
 }
 
 .card {
@@ -132,6 +169,8 @@ h2 {
     gap: 1.5em;
     padding: 1.5em;
     justify-items: start;
+    cursor: pointer; 
+    transition: ease 0.2s
 }
 
 .icons--services {
@@ -180,39 +219,58 @@ p.card__header {
     padding: 0.5em;
     text-align: center;
     border-radius: 12px;
+    cursor: pointer; 
+    transition: ease 0.2s
+}
+
+.item {
+    width: 200px;
+    height: 200px;
+    background-color: var(--clr-green);
 }
 
 
 
 
 
+footer {
+    background-color: var(--clr-dark);
+    color: var(--clr-white);
+    width: 100%;
+}
+
+.attribution {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: inherit;
+    text-align: center;
+    padding: .5em;
+}
 
 
-
-@media screen and (min-width: 600px) {
-
-    :root {
-        scroll-padding-top: 85px; /*header height */
-        padding-top: 85px;
-    }
-    
+@media screen and (min-width: 768px) {
 
     .hamburger {
         display: none;
- }
+    }
 
     .nav-menu, .nav-menu.clicked {
        position: static; /*removes all positioning from hidable menu */
        flex-direction: row; /*reset all "clicked" styles */
- }
+    }
 
- .container--card {
-    grid-template-columns: repeat(3,1fr);
+    .grid-col-2 {
+       grid-template-columns: repeat(2,1fr);
+    }
+
+    .grid-col-3 {
+       grid-template-columns: repeat(3,1fr);
+    }
+
 }
 
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 
     :root {
         --font-size-xxs: 0.875rem;
@@ -222,6 +280,15 @@ p.card__header {
         --font-size-l: 1.5rem;
         --font-size-xl: 2.25rem;
         --font-size-xxl: 3rem;
+        scroll-padding-top: 117px;
+    }
+
+    header {
+        margin-bottom: 4.5em;
+    }
+
+    .navbar {
+        padding: 2em 1em;
     }
 
 }
