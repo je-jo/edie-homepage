@@ -12,11 +12,77 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Montserrat:wght@700&family=Poppins:wght@300;400;500&display=swap"
     rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
   <title>Devchallenges | Edie Homepage</title>
 </head>
 
 <body>
+  <header>
+    <nav class="navbar" role="navigation">
+      <a class="nav-logo" href="#home">Edie</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#works">Our Works</a></li>
+        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="#clients">Clients</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-expanded="false" aria-controls="menu">
+        <span class="menu-icon material-icons">
+          menu
+        </span>
+        <span class="close-icon material-icons">
+          close
+        </span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <section id="home">
+      <img src="images/heroImage.jpg" alt="">
+      <p>We help transform your ideas into real world applications that will outperform your toughest competition and
+        help you achieve your strategic goals in short period of time.</p>
+      <form action=""></form>
+    </section>
+    <section id="services">
+      <h2>We offer high demand services</h2>
+      <div class="container--card">
+        <div class="card">
+          <span class="material-icons icons--services">
+            edit
+          </span>
+          <p class="card__header">UI/UX Design</p>
+          <p class="card__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla
+            consequat aliquet id quis turpis.</p>
+          <a href="" class="btn card__content">Get started</a>
+        </div>
+        <div class="card">
+          <span class="material-icons icons--services">
+            code
+          </span>
+          <p class="card__header">Front End</p>
+          <p class="card__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla
+            consequat aliquet id quis turpis.</p>
+          <a href="" class="btn card__content">Get started</a>
+        </div>
+        <div class="card">
+          <span class="material-icons icons--services">
+            storage
+          </span>
+          <p class="card__header">Back End</p>
+          <p class="card__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla
+            consequat aliquet id quis turpis.</p>
+          <a href="" class="btn card__content">Get started</a>
+        </div>
+      </div>
+    </section>
+    <section id="works">works</section>
+    <section id="team">team</section>
+    <section id="clients">clients</section>
+  </main>
+  <footer id="contact"></footer>
   <script src="script.js"></script>
 </body>
 
