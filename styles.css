@@ -1,0 +1,48 @@
+@import url(minireset.css);
+
+* {
+    outline: 1px solid salmon;
+}
+
+:root {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--clr-gray1);
+    
+    --clr-gray1: #333333;
+    --clr-gray2: #4f4f4f;
+    --clr-gray3: #828282;
+    --clr-gray4: #BDBDBD;
+    --clr-gray5: #E0E0E0;
+    --clr-gray6: #f2f2f2;
+    --clr-blue: #2D9CDB;
+    --clr-red: #EB5757;
+    --clr-white: #fff;
+
+    --font-size-xxs: 0.625rem;
+    --font-size-xs: 0.75rem;
+    --font-size-s: 0.75rem;
+    --font-size-m: 0.875rem;
+    --font-size-l: 1.125rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+
+    :root {
+        --font-size-xxs: 0.875rem;
+        --font-size-xs: 0.875rem;
+        --font-size-s: 1.125rem;
+        --font-size-m: 1.125rem;
+        --font-size-l: 1.5rem;
+        --font-size-xl: 2.25rem;
+        --font-size-xxl: 3rem;
+    }
+
+}
+
+
+
+/* font-family: 'Heebo', sans-serif;
+font-family: 'Montserrat', sans-serif; */
