@@ -43,12 +43,13 @@
     <h1 class="sr-only">Edie Homepage</h1>
     <section id="home" class="section">
       <h2 class="sr-only">About</h2>
-      <p class="section__title"><span class="title__accent">Unhappy with your website?</span>We create beautiful and
+      <p class="section__title section__title--home"><span class="title__accent">Unhappy with your website?</span>We
+        create beautiful and
         fast web services</p>
       <div class="hero-container">
         <img src="images/heroImage.jpg" alt="">
       </div>
-      <p class="section__title">Story, emotion and purpose</p>
+      <p class="section__title section__title--home">Story, emotion and purpose</p>
       <p class="section__para">We help transform your ideas into real world applications that will outperform your
         toughest competition and
         help you achieve your strategic goals in short period of time.</p>
@@ -97,36 +98,47 @@
     <section id="works" class="section">
       <h2 class="sr-only">Our works</h2>
       <p class="section__title">Good design means good business</p>
-      <div class="grid-wrapper grid-col-2">
+      <div class="grid-wrapper grid-wrapper--works grid-col-2">
         <div class="card">
           <img src="images/smarthome.jpg" alt="">
-          <h3 class="card__header"><span class="title__accent">Full stack application</span>Smart home dashboard</h3>
+          <h3 class="card__header card__header--works"><span class="title__accent title__accent--grey">Full stack
+              application</span>Smart
+            home dashboard</h3>
         </div>
         <div class="card">
           <img src="images/onboard.png" alt="">
-          <h3 class="card__header"><span class="title__accent">UX/UI design</span>Onboard application</h3>
+          <h3 class="card__header card__header--works"><span class="title__accent title__accent--grey">UX/UI
+              design</span>Onboard
+            application</h3>
         </div>
         <div class="card">
           <img src="images/booking.png" alt="">
-          <h3 class="card__header"><span class="title__accent">Mobile application</span>Booking system</h3>
+          <h3 class="card__header card__header--works"><span class="title__accent title__accent--grey">Mobile
+              application</span>Booking
+            system</h3>
         </div>
         <div class="card">
           <img src="images/juice-product.png" alt="">
-          <h3 class="card__header"><span class="title__accent">FFront End application</span>Juice product homepage</h3>
+          <h3 class="card__header card__header--works"><span class="title__accent title__accent--grey">Front End
+              application</span>Juice
+            product homepage</h3>
         </div>
-        <a href="" class="link--works">See more</a>
+        <a href="" class="link--works">See more<span class="material-icons">
+            arrow_right_alt
+          </span></a>
       </div>
-      
+
     </section>
     <section id="team" class="section">
       <h2 class="sr-only">Team</h2>
       <div class="grid-wrapper grid-col-2">
         <div class="team">
-          <p class="section__title"><span class="title__accent">Meet the team</span>We are chilled and a laidback team
+          <p class="section__title"><span class="title__accent title__accent--red">Meet the team</span>We are chilled
+            and a laidback team
           </p>
           <p class="section__para">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-        <div class="grid-wrapper team-wrapper">
+        <div class="grid-wrapper grid-wrapper--2-col-fixed">
           <img src="images/person1.png" alt="">
           <img src="images/person2.png" alt="">
           <img src="images/person3.png" alt="">
@@ -135,11 +147,14 @@
     </section>
     <section id="clients" class="section">
       <h2 class="sr-only">Client testimonials</h2>
-      <p class="section__title">“Fast and outstanding results. Edie understands their customer’s needs. They have a
+      <p class="section__title section__title--clients">“Fast and outstanding results. Edie understands their customer’s
+        needs. They have a
         young and talented team.”</p>
-      <img src="images/person4.png" alt="">
-      <p>Carlos Tran</p>
-      <p>The Decorate Gatsby</p>
+      <div class="card grid-wrapper--2-col-fixed">
+        <img src="images/person4.png" alt="">
+        <h3 class="card__header card__header--clients">Carlos Tran<span class="title__accent title__accent--grey">The
+            Decorate Gatsby</span></h3>
+      </div>
     </section>
   </main>
   <footer id="contact">
@@ -154,7 +169,14 @@
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <div>edie</div>
+      <div>
+        <p class="nav-logo">Edie</p>
+        <div class="container--icons">
+          <a href=""><img src="images/instagram.svg" alt=""></img></a>
+          <a href=""><img src="images/linkedin.svg" alt=""></img></a>
+          <a href=""><img src="images/twitter.svg" alt=""></img></a>
+        </div>
+      </div>
       <form action="">
         <label for="email-2">Want us to contact you?</label>
         <div class="input-wrapper">
