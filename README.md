@@ -60,9 +60,8 @@ This application/site was created as a submission to a [DevChallenges](https://d
 
 ## Acknowledgements
 
-- [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
-- [Node.js](https://nodejs.org/)
-- [Marked - a markdown parser](https://github.com/chjj/marked)
+- [Full Width Containers in Limited Width Parents](https://css-tricks.com/full-width-containers-limited-width-parents/)
+- [Client-side form validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
 
 ## Contact
 
