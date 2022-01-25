@@ -1,4 +1,4 @@
-@import url(assets/css/minireset.css);
+@import url(minireset.css);
 
 /* * {
     outline: 1px solid salmon;
@@ -117,6 +117,8 @@ header {
     flex-direction: column;
     justify-content: space-around;
     background-color: #fff; /*otherwise is transparent */
+    border-bottom: 0.5em solid var(--clr-gray5);
+    border-radius: 1em;
 }
 
 .hamburger {
