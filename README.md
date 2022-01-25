@@ -31,7 +31,7 @@
 
 ## Overview
 
-![screenshot](https://raw.githubusercontent.com/je-jo/edie-homepage/main/images/edie-homepage.png)
+![screenshot](https://raw.githubusercontent.com/je-jo/edie-homepage/main/edie-homepage.png)
 
 Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
