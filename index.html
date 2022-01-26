@@ -47,19 +47,21 @@
         create beautiful and
         fast web services</p>
       <div class="hero-container">
-        <img src="assets/images/heroImage.jpg" alt="">
+        <img src="assets/images/heroImage.jpg" alt="young man showing project plans to coleagues at a modern office">
       </div>
       <p class="section__title section__title--home">Story, emotion and purpose</p>
       <p class="section__para">We help transform your ideas into real world applications that will outperform your
         toughest competition and
         help you achieve your strategic goals in short period of time.</p>
-      <form action="">
+
+      <form action="" id="form-1" novalidate>
         <label for="email">Want us to contact you?</label>
         <div class="input-wrapper">
-          <input type="email" id="email" placeholder="Email">
+          <input type="email" id="email" placeholder="Email" required>
           <span class="focus"></span>
-          <button class="btn btn--input">Join</button>
+          <button type="submit" class="btn btn--input">Join</button>
         </div>
+        <div id="modal-1"></div>
       </form>
     </section>
     <section id="services" class="section">
@@ -100,25 +102,25 @@
       <p class="section__title">Good design means good business</p>
       <div class="grid-wrapper grid-wrapper--works grid-col-2">
         <div class="card">
-          <img src="assets/images/smarthome.jpg" alt="">
+          <img src="assets/images/smarthome.jpg" alt="screenshot of a dashboard application">
           <h3 class="card__header card__header--works"><span class="title__accent title__accent--grey">Full stack
               application</span>Smart
             home dashboard</h3>
         </div>
         <div class="card">
-          <img src="assets/images/onboard.png" alt="">
+          <img src="assets/images/onboard.png" alt="a collage of design mockups">
           <h3 class="card__header card__header--works"><span class="title__accent title__accent--grey">UX/UI
               design</span>Onboard
             application</h3>
         </div>
         <div class="card">
-          <img src="assets/images/booking.png" alt="">
+          <img src="assets/images/booking.png" alt="screenshot of a calendar type application">
           <h3 class="card__header card__header--works"><span class="title__accent title__accent--grey">Mobile
               application</span>Booking
             system</h3>
         </div>
         <div class="card">
-          <img src="assets/images/juice-product.png" alt="">
+          <img src="assets/images/juice-product.png" alt="screenshot of a product landing page for green juice">
           <h3 class="card__header card__header--works"><span class="title__accent title__accent--grey">Front End
               application</span>Juice
             product homepage</h3>
@@ -139,9 +141,9 @@
           <p class="section__para">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="grid-wrapper grid-wrapper--2-col-fixed grid-wrapper--team">
-          <img src="assets/images/person1.png" alt="">
-          <img src="assets/images/person2.png" alt="">
-          <img src="assets/images/person3.png" alt="">
+          <img src="assets/images/person1.png" alt="smiling young man">
+          <img src="assets/images/person2.png" alt="smiling young man with glasses">
+          <img src="assets/images/person3.png" alt="smiling young woman">
         </div>
       </div>
     </section>
@@ -151,7 +153,7 @@
         needs. They have a
         young and talented team.”</p>
       <div class="card card--clients">
-        <img src="assets/images/person4.png" alt="">
+        <img src="assets/images/person4.png" alt="smiling young man in business suit">
         <h3 class="card__header card__header--clients">Carlos Tran<span class="title__accent title__accent--grey">The
             Decorate Gatsby</span></h3>
       </div>
@@ -177,7 +179,7 @@
           <a href=""><img src="assets/icons/twitter.svg" alt=""></img></a>
         </div>
       </div>
-      <form action="">
+      <form action="" id="form-2">
         <label for="email-2">Want us to contact you?</label>
         <div class="input-wrapper">
           <input type="email" id="email-2" placeholder="Email">

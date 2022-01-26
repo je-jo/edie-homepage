@@ -32,7 +32,7 @@
 
 :focus {
     outline: 0.2em dotted var(--clr-blue);
-    outline-offset: 0.1em;
+    outline-offset: 0.2em;
     border-radius: inherit;
 }
 
@@ -101,7 +101,6 @@ header {
     align-items: center;
     position: fixed;
     top: -100%; /* moves it off screen */
-    transition: 0.3s;
     font-size: var(--font-size-l);
 }
 
@@ -113,12 +112,12 @@ header {
     top: 67px;  /*this line takes it back to screen, plus the header height */
     left: 0;
     right: 0;
-    bottom: 50%;
+    bottom: 10em;
     flex-direction: column;
     justify-content: space-around;
     background-color: #fff; /*otherwise is transparent */
     border-bottom: 0.5em solid var(--clr-gray5);
-    border-radius: 1em;
+    border-radius: 0 0 0 1em;
 }
 
 .hamburger {
@@ -207,6 +206,7 @@ header {
 
 form {
     padding: 2.5em 0;
+    position: relative;
 }
 
 label {
@@ -251,12 +251,26 @@ input:focus + .focus {
     right: -1px;
     bottom: -1px;
     outline: 0.2em dotted var(--clr-blue);
-    outline-offset: 0.1em;
+    outline-offset: 0.2em;
     border-radius: inherit;
 }
 
 ::placeholder {
     color: var(--clr-gray4);
+}
+
+#modal-1 {
+    display: none; 
+    position: absolute; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    overflow: auto; 
+    padding: 0.5em 1em;
+    background-color: var(--clr-red);
+    color: #fff;
+    font-size: var(--font-size-xs);
+    border-radius: 0.5em;
 }
 
 /* cards */
@@ -340,7 +354,7 @@ a {
     transition: 0.1s ease-in;
 }
 
-a:hover {
+a:hover:not(.btn) {
     box-shadow: 0 0.2em 0 0 rgb(45, 156, 219);
 }
 
