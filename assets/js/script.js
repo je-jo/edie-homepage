@@ -34,36 +34,45 @@ function hideMenu() {
 // email validation
 
 const form = document.getElementById('form-1');
-
 const email = document.getElementById('email');
 const modal = document.getElementById('modal-1');
 
-email.addEventListener('input', function () {
-
-  if (email.validity.valid) {
-    modal.textContent = '';
-    modal.className = 'error';
-  } else {
-    showError();
-  }
-});
-
 form.addEventListener('submit', function (event) {
-
-  if (!email.validity.valid || email.validity.valueMissing) {
-    showError();
-    event.preventDefault();
-  }
-});
-
-function showError() {
   modal.style.display = "block"
   if (email.validity.valueMissing) {
-    modal.textContent = 'You need to enter an e-mail address.';
-  } else if (email.validity.typeMismatch) {
-    modal.textContent = 'Entered value needs to be an e-mail address.';
+    modal.textContent = "You need to enter an e-mail address.";
+    event.preventDefault();
   }
-}
+  else if (email.validity.typeMismatch) {
+    modal.textContent = "Entered value needs to be an e-mail address."
+    event.preventDefault();
+  }
+  else {
+    modal.style.backgroundColor = "#28af60";
+    modal.textContent = "Success!"
+  }
+});
+
+const form2 = document.getElementById('form-2');
+const email2 = document.getElementById('email-2');
+const modal2 = document.getElementById('modal-2');
+
+form2.addEventListener('submit', function (event) {
+  modal2.style.display = "block"
+  if (email2.validity.valueMissing) {
+    modal2.textContent = "You need to enter an e-mail address.";
+    event.preventDefault();
+  }
+  else if (email2.validity.typeMismatch) {
+    modal2.textContent = "Entered value needs to be an e-mail address."
+    event.preventDefault();
+  }
+  else {
+    modal2.style.backgroundColor = "#28af60";
+    modal2.textContent = "Success!"
+  }
+});
+
 
 window.addEventListener("click", () => {
   modal.style.display = "none";
