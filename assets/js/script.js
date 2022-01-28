@@ -33,47 +33,30 @@ function hideMenu() {
 
 // email validation
 
-const form = document.getElementById('form-1');
-const email = document.getElementById('email');
-const modal = document.getElementById('modal-1');
+const forms = [...document.getElementsByClassName("form")];
+const modals = [...document.getElementsByClassName("modal")];
 
-form.addEventListener('submit', function (event) {
-  modal.style.display = "block"
-  if (email.validity.valueMissing) {
-    modal.textContent = "You need to enter an e-mail address.";
-    event.preventDefault();
-  }
-  else if (email.validity.typeMismatch) {
-    modal.textContent = "Entered value needs to be an e-mail address."
-    event.preventDefault();
-  }
-  else {
-    modal.style.backgroundColor = "#28af60";
-    modal.textContent = "Success!"
-  }
-});
+ forms.forEach((el) => {
+  el.addEventListener('submit', (event) => {
+    el.querySelector(".modal").style.display = "block";
+    if (el.querySelector("input").validity.valueMissing) {
+     el.querySelector(".modal").textContent = "You need to enter an email address"
+      event.preventDefault();
+    } else if (el.querySelector("input").validity.typeMismatch){
+      el.querySelector(".modal").textContent = "Entered value needs to be an e-mail address."
+      event.preventDefault();
+     }
+     else {
+      el.querySelector(".modal").style.backgroundColor = "#28af60";
+      el.querySelector(".modal").textContent = "Success!"
+     }
+   });
+ });
 
-const form2 = document.getElementById('form-2');
-const email2 = document.getElementById('email-2');
-const modal2 = document.getElementById('modal-2');
-
-form2.addEventListener('submit', function (event) {
-  modal2.style.display = "block"
-  if (email2.validity.valueMissing) {
-    modal2.textContent = "You need to enter an e-mail address.";
-    event.preventDefault();
-  }
-  else if (email2.validity.typeMismatch) {
-    modal2.textContent = "Entered value needs to be an e-mail address."
-    event.preventDefault();
-  }
-  else {
-    modal2.style.backgroundColor = "#28af60";
-    modal2.textContent = "Success!"
-  }
-});
-
-
-window.addEventListener("click", () => {
-  modal.style.display = "none";
-});
+ modals.forEach((el) => {
+   window.addEventListener ("click", () => {
+    if (el.style.display = "block") {
+      el.style.display = "none"
+    }
+   });
+ });
